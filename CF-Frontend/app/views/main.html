@@ -1,0 +1,18 @@
+<div class="jumbotron">
+  <h4>Please input the string</h4>
+  <form name="form" class="" role="form" ng-submit="get_combinations()">
+  <table>
+    <tr>
+      <td class="col-md-2"></td>
+      <td class="col-md-7"><input class="input-string" type="text" name="str" ng-model="model.str" ng-required="true"></td>
+      <td class = "col-md-3"><button class="submit-btn btn btn-success " type="submit">Submit<span class="glyphicon glyphicon-ok"></span></button></td>    
+    </tr>
+  </table>
+  </form>
+</div>
+
+<div ng-show="model.result" class="row marketing">
+  <h4>The Combinations are: </h4>
+  <div ng-repeat="string in model.result">{{string}}</div>
+  <h4>Total count is: {{model.count}}</h4>
+</div>
